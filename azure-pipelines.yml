@@ -6,24 +6,28 @@ jobs:
           buildConfiguration: Release
     steps:
     - task: UseDotNet@2
+      displayName: use dotnet 3.1.100
       inputs:
         packageType: "sdk"
         version: "3.1.100"
     - task: DotNetCoreCLI@2
+      displayName: dotnet restore
       inputs:
         command: 'restore'
     - task: DotNetCoreCLI@2
+      displayName: dotnet build
       inputs:
         command: 'build'
     - task: DotNetCoreCLI@2
+      displayName: dotnet test
       inputs:
         command: 'test'
     - task: DotNetCoreCLI@2
-      displayName: "Pack"
+      displayName: dotnet pack
+      condition: and(succeeded(), eq(variables['Build.SourceBranch'], 'refs/heads/master'))
       inputs:
         command: pack
         configuration: $(buildConfiguration)
-        condition: and(succeeded(), eq(variables['Build.SourceBranch'], 'refs/heads/master'))
         packagesToPack: "Bootstrap/Bootstrap.csproj;ClientLibrary/ClientLibrary.csproj;"
         nobuild: true
         arguments: "-o $(Build.ArtifactStagingDirectory)"
