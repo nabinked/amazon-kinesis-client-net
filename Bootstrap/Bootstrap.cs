@@ -104,7 +104,7 @@ namespace Amazon.Kinesis.ClientLibrary.Bootstrap
         [Option('e', "execute", HelpText =
             "Actually launch the KCL. If not specified, prints the command used to launch the KCL.")]
         public bool ShouldExecute { get; set; }
-        
+
         [Option('l', "log-configuration", Required = false, HelpText = "A Logback XML configuration file")]
         public string LogbackConfiguration { get; set; }
     }
@@ -203,8 +203,8 @@ namespace Amazon.Kinesis.ClientLibrary.Bootstrap
             }
 
             {
-            if (!Path.IsPathRooted(jarFolder))
-                jarFolder = Path.Combine(Directory.GetCurrentDirectory(), jarFolder);
+                if (!Path.IsPathRooted(jarFolder))
+                    jarFolder = Path.Combine(Directory.GetCurrentDirectory(), jarFolder);
             }
 
             Console.Error.WriteLine("Fetching required jars...");
@@ -271,6 +271,7 @@ namespace Amazon.Kinesis.ClientLibrary.Bootstrap
 
         public static void Main(string[] args)
         {
+            Console.WriteLine("Args: " + string.Join(" | ", args));
             var parserResult = Parser.Default.ParseArguments<Options>(args);
 
             parserResult.WithParsed(options =>
@@ -292,9 +293,9 @@ namespace Amazon.Kinesis.ClientLibrary.Bootstrap
                     java,
                     "-cp",
                     javaClassPath,
-                    "software.amazon.kinesis.multilang.MultiLangDaemon",                    
-                    "-p", 
-                    options.PropertiesFile                    
+                    "software.amazon.kinesis.multilang.MultiLangDaemon",
+                    "-p",
+                    options.PropertiesFile
                 };
                 if (!string.IsNullOrEmpty(options.LogbackConfiguration))
                 {
@@ -302,7 +303,7 @@ namespace Amazon.Kinesis.ClientLibrary.Bootstrap
                     cmd.Add(options.LogbackConfiguration);
                 }
                 if (options.ShouldExecute)
-                {                    
+                {
                     // Start the KCL.
                     Process proc = new Process
                     {
