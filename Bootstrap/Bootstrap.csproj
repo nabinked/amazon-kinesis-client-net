@@ -1,10 +1,16 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <OutputType>Exe</OutputType>
     <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
     <TargetFramework>netcoreapp3.1</TargetFramework>
     <PackAsTool>true</PackAsTool>
     <ToolCommandName>dotnet-aws-kcl-bootstrap</ToolCommandName>
+
+    <PackageId>dotnet-aws-kcl-bootstrap</PackageId>
+    <Description>AWS KCL bootstrapper, used along with Nabin.AWS.Kcl for dotnet</Description>
+    <VersionPrefix>0.0.1</VersionPrefix>
+    <RepositoryType>git</RepositoryType>
+    <RepositoryUrl>https://github.com/nabinked/amazon-kinesis-client-net</RepositoryUrl>
   </PropertyGroup>
 
   <ItemGroup>
