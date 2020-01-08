@@ -18,6 +18,7 @@ jobs:
       displayName: dotnet build
       inputs:
         command: 'build'
+        arguments: "-c $(buildConfiguration)"
     - task: DotNetCoreCLI@2
       displayName: dotnet test
       inputs:
