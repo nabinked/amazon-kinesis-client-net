@@ -193,7 +193,7 @@ namespace Amazon.Kinesis.ClientLibrary.Bootstrap
         /// <summary>
         /// Downloads all the required jars from Maven and returns a classpath string that includes all those jars.
         /// </summary>
-        /// <returns>Classpath string that includes all the jars downloaded.</returns>
+        /// <returns>Wildcard jar folder.</returns>
         /// <param name="jarFolder">Folder into which to save the jars.</param>
         private static string FetchJars(string jarFolder)
         {
@@ -216,9 +216,7 @@ namespace Amazon.Kinesis.ClientLibrary.Bootstrap
 
             Console.Error.WriteLine("Done.");
 
-            List<string> files = Directory.GetFiles(jarFolder).Where(f => f.EndsWith(".jar")).ToList();
-            files.Add(Directory.GetCurrentDirectory());
-            return string.Join(Path.PathSeparator.ToString(), files);
+            return Path.Combine(jarFolder, "*");
         }
 
         private static string FindJava(string java)
