@@ -95,7 +95,7 @@ namespace Amazon.Kinesis.ClientLibrary.Bootstrap
                 "Path to java, used to start the KCL multi-lang daemon. Attempts to auto-detect if not specified.")]
         public string JavaLocation { get; set; }
 
-        [Option('p', "properties", Required = true, HelpText = "Path to properties file used to configure the KCL.")]
+        [Option('p', "properties", Required = false, HelpText = "Path to properties file used to configure the KCL. Must be provided when --execute flag is provided")]
         public string PropertiesFile { get; set; }
 
         [Option("jar-folder", Required = false, HelpText = "Folder to place required jars in. Defaults to ./jars")]

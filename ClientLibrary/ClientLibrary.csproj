@@ -6,7 +6,7 @@
 
     <PackageId>Nabin.AWS.Kcl</PackageId>
     <Description>AWS KCL ClientLibrary for dotnet</Description>
-    <VersionPrefix>0.0.3</VersionPrefix>
+    <VersionPrefix>0.0.4</VersionPrefix>
     <RepositoryType>git</RepositoryType>
     <RepositoryUrl>https://github.com/nabinked/amazon-kinesis-client-net</RepositoryUrl>
   </PropertyGroup>
