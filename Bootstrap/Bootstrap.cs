@@ -269,7 +269,6 @@ namespace Amazon.Kinesis.ClientLibrary.Bootstrap
 
         public static void Main(string[] args)
         {
-            Console.WriteLine("Args: " + string.Join(" | ", args));
             var parserResult = Parser.Default.ParseArguments<Options>(args);
 
             parserResult.WithParsed(options =>

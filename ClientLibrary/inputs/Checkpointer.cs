@@ -11,7 +11,7 @@ namespace Amazon.Kinesis.ClientLibrary
     /// </summary>
     public abstract class Checkpointer
     {
-        internal abstract void Checkpoint(string sequenceNumber, CheckpointErrorHandler errorHandler = null);
+        public abstract void Checkpoint(string sequenceNumber, CheckpointErrorHandler errorHandler = null);
 
         /// <summary>
         /// <para>

@@ -308,8 +308,7 @@ namespace Amazon.Kinesis.ClientLibrary
             {
                 _kclProcess = kclProcess;
             }
-
-            internal override void Checkpoint(string sequenceNumber, CheckpointErrorHandler errorHandler = null)
+            public override void Checkpoint(string sequenceNumber, CheckpointErrorHandler errorHandler = null)
             {
                 _kclProcess._iohandler.WriteAction(new CheckpointAction(sequenceNumber));
                 var response = _kclProcess._iohandler.ReadAction();
