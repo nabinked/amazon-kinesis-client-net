@@ -3,10 +3,10 @@
   <PropertyGroup>
     <TargetFramework>netstandard2.1</TargetFramework>
     <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
-
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
     <PackageId>Kinesis.ClientLibrary.Net</PackageId>
     <Description>AWS KCL ClientLibrary for dotnet</Description>
-    <VersionPrefix>0.0.5</VersionPrefix>
+    <VersionPrefix>0.0.6</VersionPrefix>
     <RepositoryType>git</RepositoryType>
     <RepositoryUrl>https://github.com/nabinked/amazon-kinesis-client-net</RepositoryUrl>
   </PropertyGroup>
