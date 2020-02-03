@@ -62,7 +62,11 @@ namespace Amazon.Kinesis.ClientLibrary
         {
             return Create(recordProcessor, new IoHandler());
         }
-
+        /// <summary>
+        /// Create an instance of KclProcess that uses the given IShardRecordProcessor to process records.
+        /// </summary>
+        /// <param name="recordProcessor"></param>
+        /// <returns></returns>
         public static KclProcess Create(IShardRecordProcessor recordProcessor)
         {
             return Create(recordProcessor, new IoHandler());

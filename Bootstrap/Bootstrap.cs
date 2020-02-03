@@ -126,8 +126,8 @@ namespace Amazon.Kinesis.ClientLibrary.Bootstrap
 
         private static readonly List<MavenPackage> MAVEN_PACKAGES = new List<MavenPackage>()
         {
-            new MavenPackage("software.amazon.kinesis", "amazon-kinesis-client-multilang", "2.1.2"),
-            new MavenPackage("software.amazon.kinesis", "amazon-kinesis-client", "2.1.2"),
+            new MavenPackage("software.amazon.kinesis", "amazon-kinesis-client-multilang", "2.2.8"),
+            new MavenPackage("software.amazon.kinesis", "amazon-kinesis-client", "2.2.8"),
             new MavenPackage("software.amazon.awssdk", "kinesis", "2.4.0"),
             new MavenPackage("software.amazon.awssdk", "aws-cbor-protocol", "2.4.0"),
             new MavenPackage("com.fasterxml.jackson.dataformat", "jackson-dataformat-cbor", "2.9.8"),
