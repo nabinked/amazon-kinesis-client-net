@@ -1,4 +1,9 @@
-# Amazon Kinesis Client Library for .NET
+# Fork of [Amazon Kinesis Client Library for .NET](https://github.com/awslabs/amazon-kinesis-client-net)
+
+Essentially provides nuget packages for, addressing [this issue](https://github.com/awslabs/amazon-kinesis-client-net/issues/3) 
+- the bootstrap project as a [dotnet tool](https://www.nuget.org/packages/dotnet-aws-kcl-bootstrap/)
+- the client library as a [nuget package](https://www.nuget.org/packages/Kinesis.ClientLibrary.Net/)
+
 
 This package provides an interface to the [Amazon Kinesis Client Library][amazon-kcl] (KCL) [MultiLangDaemon][multi-lang-daemon] for the .NET Framework.
 
