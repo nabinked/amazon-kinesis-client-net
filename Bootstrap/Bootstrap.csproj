@@ -8,7 +8,7 @@
 
     <PackageId>aws-kcl-bootstrap</PackageId>
     <Description>AWS KCL bootstrapper, used along with Nabin.AWS.Kcl for dotnet</Description>
-    <VersionPrefix>0.0.8</VersionPrefix>
+    <VersionPrefix>0.0.9</VersionPrefix>
     <RepositoryType>git</RepositoryType>
     <RepositoryUrl>https://github.com/nabinked/amazon-kinesis-client-net</RepositoryUrl>
   </PropertyGroup>
