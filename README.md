@@ -4,6 +4,9 @@ Essentially provides nuget packages for, addressing [this issue](https://github.
 - the bootstrap project as a [dotnet tool](https://www.nuget.org/packages/dotnet-aws-kcl-bootstrap/)
 - the client library as a [nuget package](https://www.nuget.org/packages/Kinesis.ClientLibrary.Net/)
 
+[![Build Status](https://dev.azure.com/nabinked/amazon-kinesis-client-net/_apis/build/status/nabinked.amazon-kinesis-client-net?branchName=master)](https://dev.azure.com/nabinked/amazon-kinesis-client-net/_build/latest?definitionId=20&branchName=master)
+![Nuget](https://img.shields.io/nuget/v/Kinesis.ClientLibrary.Net?label=nuget%20%7C%20Kinesis.ClientLibrary.Net)
+![Nuget](https://img.shields.io/nuget/v/aws-kcl-bootstrap?label=nuget%20%7C%20Kinesis.ClientLibrary.Net)
 
 This package provides an interface to the [Amazon Kinesis Client Library][amazon-kcl] (KCL) [MultiLangDaemon][multi-lang-daemon] for the .NET Framework.
 
