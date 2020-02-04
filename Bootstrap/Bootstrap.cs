@@ -137,6 +137,7 @@ namespace Amazon.Kinesis.ClientLibrary.Bootstrap
         /// - parse that file to the list below and copy paste the output here, 
         ///   NOTE: this list does not contain amazon-kinesis-client-multilang itself, so add that to the list as well
         ///     - cat deps.txt | awk '{$1=$1;print}' | while IFS=: read -r gId aId jar ver scope; do [ -z "$scope" ] || printf 'new MavenPackage("%s", "%s", "%s"),\n' "$gId" "$aId" "$ver"; done
+        ///     - the command above is not perfect.!-- Double check each item in the list, specially version
         /// </summary>
         /// <typeparam name="MavenPackage"></typeparam>
         /// <returns></returns>
@@ -197,7 +198,7 @@ namespace Amazon.Kinesis.ClientLibrary.Bootstrap
             new MavenPackage("io.netty", "netty-buffer", "4.1.42.Final"),
             new MavenPackage("com.typesafe.netty", "netty-reactive-streams-http", "2.0.4"),
             new MavenPackage("io.netty", "netty-codec-http", "4.1.42.Final"),
-            new MavenPackage("io.netty", "netty-transport-native-epoll", "linux-x86_64"),
+            new MavenPackage("io.netty", "netty-transport-native-epoll", "4.1.42.Final"),
             new MavenPackage("org.slf4j", "slf4j-api", "1.7.25"),
             new MavenPackage("software.amazon.awssdk", "http-client-spi", "2.10.56"),
             new MavenPackage("commons-logging", "commons-logging", "1.1.3"),
